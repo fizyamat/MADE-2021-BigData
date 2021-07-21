@@ -1,0 +1,74 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/spark-2.4.7-bin-hadoop2.7/jars/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop-2.10.0/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+21/04/21 23:35:36 INFO spark.SparkContext: Running Spark version 2.4.7
+21/04/21 23:35:36 INFO spark.SparkContext: Submitted application: SparkNestedCRUD.py
+21/04/21 23:35:36 INFO spark.SecurityManager: Changing view acls to: made21q1_gluschenko
+21/04/21 23:35:36 INFO spark.SecurityManager: Changing modify acls to: made21q1_gluschenko
+21/04/21 23:35:36 INFO spark.SecurityManager: Changing view acls groups to: 
+21/04/21 23:35:36 INFO spark.SecurityManager: Changing modify acls groups to: 
+21/04/21 23:35:36 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(made21q1_gluschenko); groups with view permissions: Set(); users  with modify permissions: Set(made21q1_gluschenko); groups with modify permissions: Set()
+21/04/21 23:35:36 INFO util.Utils: Successfully started service 'sparkDriver' on port 38671.
+21/04/21 23:35:37 INFO spark.SparkEnv: Registering MapOutputTracker
+21/04/21 23:35:37 INFO spark.SparkEnv: Registering BlockManagerMaster
+21/04/21 23:35:37 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/21 23:35:37 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/21 23:35:37 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-06e9b64e-db75-4d95-b59e-e734390d5c52
+21/04/21 23:35:37 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+21/04/21 23:35:37 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+21/04/21 23:35:37 INFO util.log: Logging initialized @2760ms
+21/04/21 23:35:37 INFO server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+21/04/21 23:35:37 INFO server.Server: Started @2857ms
+21/04/21 23:35:37 INFO server.AbstractConnector: Started ServerConnector@53d4fbf4{HTTP/1.1,[http/1.1]}{168.119.98.139:4040}
+21/04/21 23:35:37 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1420ed29{/jobs,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4f2bcd68{/jobs/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5a726ba{/jobs/job,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7f59364b{/jobs/job/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6e88e445{/stages,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@52268dd8{/stages/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@33990bcc{/stages/stage,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4ae9feb6{/stages/stage/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@31554b4c{/stages/pool,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@107495b4{/stages/pool/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3551337{/storage,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6cc51a5{/storage/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1dd8751b{/storage/rdd,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@29b59a21{/storage/rdd/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@252e88b{/environment,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6677c01d{/environment/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@38d90165{/executors,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3db8f0cd{/executors/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@28bb5141{/executors/threadDump,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@70940b63{/executors/threadDump/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@b6fe3d{/static,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2003581b{/,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1b0a9931{/api,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2a5aada0{/jobs/job/kill,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3824d0ca{/stages/stage/kill,null,AVAILABLE,@Spark}
+21/04/21 23:35:37 INFO ui.SparkUI: Bound SparkUI to 168.119.98.139, and started at http://brain-client3.bigdatateam.org:4040
+21/04/21 23:35:37 INFO executor.Executor: Starting executor ID driver on host localhost
+21/04/21 23:35:37 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36779.
+21/04/21 23:35:37 INFO netty.NettyBlockTransferService: Server created on brain-client3.bigdatateam.org:36779
+21/04/21 23:35:37 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/21 23:35:37 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, brain-client3.bigdatateam.org, 36779, None)
+21/04/21 23:35:37 INFO storage.BlockManagerMasterEndpoint: Registering block manager brain-client3.bigdatateam.org:36779 with 366.3 MB RAM, BlockManagerId(driver, brain-client3.bigdatateam.org, 36779, None)
+21/04/21 23:35:37 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, brain-client3.bigdatateam.org, 36779, None)
+21/04/21 23:35:37 INFO storage.BlockManager: external shuffle service port = 7337
+21/04/21 23:35:37 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, brain-client3.bigdatateam.org, 36779, None)
+21/04/21 23:35:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@350a1355{/metrics/json,null,AVAILABLE,@Spark}
+21/04/21 23:35:38 INFO scheduler.EventLoggingListener: Logging events to hdfs://brain-master.bigdatateam.org/spark/logs/local-1619040937426
+21/04/21 23:35:39 INFO server.AbstractConnector: Stopped Spark@53d4fbf4{HTTP/1.1,[http/1.1]}{168.119.98.139:4040}
+21/04/21 23:35:39 INFO ui.SparkUI: Stopped Spark web UI at http://brain-client3.bigdatateam.org:4040
+21/04/21 23:35:39 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/04/21 23:35:39 INFO memory.MemoryStore: MemoryStore cleared
+21/04/21 23:35:39 INFO storage.BlockManager: BlockManager stopped
+21/04/21 23:35:39 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+21/04/21 23:35:39 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+21/04/21 23:35:39 INFO spark.SparkContext: Successfully stopped SparkContext
+21/04/21 23:35:39 INFO util.ShutdownHookManager: Shutdown hook called
+21/04/21 23:35:39 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-20bee7b7-2047-487d-bf0b-3b3d3350cbd7
+21/04/21 23:35:39 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-25d24556-6584-49f3-9daf-13dcadab288e/pyspark-96e9ea90-4dac-4759-ba45-484d62d0e562
+21/04/21 23:35:39 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-25d24556-6584-49f3-9daf-13dcadab288e

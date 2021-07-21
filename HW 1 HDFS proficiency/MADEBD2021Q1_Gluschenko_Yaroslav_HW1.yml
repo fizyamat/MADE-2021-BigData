@@ -1,0 +1,64 @@
+beginner.how_many_items_in_hdfs:
+    stdin: 9
+intermediate.hdfs_list_recursively:
+    stdin: hdfs dfs -ls -R /data/wiki
+intermediate.hdfs_list_recursively_human_readable:
+    stdin: hdfs dfs -ls -h -R /data/wiki
+intermediate.hdfs_file_replication_factor:
+    stdin: 3
+intermediate.hdfs_folder_replication_factor:
+    stdin: 0
+intermediate.hdfs_describe_size:
+    stdin: "actual"
+intermediate.hdfs_cumulative_size:
+    stdin: hdfs dfs -du -s /data/wiki
+intermediate.hdfs_create_folder:
+    stdin: hdfs dfs -mkdir /user/mail_2021q1/i.glushchenko
+intermediate.hdfs_create_nested_folder:
+    stdin: hdfs dfs -mkdir -p /user/mail_2021q1/i.glushchenko_task_8/new_folder/new_folder
+intermediate.hdfs_remove_nested_folders:
+    stdin: hdfs dfs -rm -R /user/mail_2021q1/i.glushchenko_task_8
+intermediate.hdfs_trash_behavior:
+    # Trash это директория куда помещаются файлы,и через заданное время удаляются.
+    stdin: hdfs dfs -rm -R -skipTrash /user/mail_2021q1/i.glushchenko_task_8
+intermediate.hdfs_create_empty_file:
+    stdin: hdfs dfs -touchz /user/mail_2021q1/empty_file
+intermediate.hdfs_create_small_file: 
+    stdin: hdfs dfs -put i.glushchenko/file.txt /user/mail_2021q1/i.glushchenko
+intermediate.hdfs_output_file:
+    stdin: hdfs dfs -cat /user/mail_2021q1/i.glushchenko
+intermediate.hdfs_output_file_end:
+    stdin: hdfs dfs -tail /user/mail_2021q1/i.glushchenko/file.txt
+intermediate.hdfs_output_file_start:
+    stdin: hdfs dfs -cat /user/mail_2021q1/i.glushchenko/file.txt | head -2
+intermediate.hdfs_tail_vs_unix_tail:
+    stdin: hdfs dfs -cat /user/mail_2021q1/i.glushchenko/file.txt | tail -c 1024
+intermediate.hdfs_copy_file:
+    stdin: hdfs dfs -cp /user/mail_2021q1/i.glushchenko/file.txt /user/mail_2021q1/i.glushchenko/new_folder
+intermediate.hdfs_move_file:
+    stdin: hdfs dfs -mv /user/mail_2021q1/i.glushchenko/new_folder/file.txt /user/mail_2021q1/i.glushchenko/new_folder1
+intermediate.hdfs_download_and_concatenate:
+    stdin: hdfs dfs -getmerge /user/mail_2021q1/i.glushchenko/new_folder1/file.txt /user/mail_2021q1/i.glushchenko/file.txt i.glushchenko/file.txt
+advanced.hdfs_set_file_replication:
+    stdin: hdfs dfs -setrep -w 2 /user/mail_2021q1/i.glushchenko/file.txt
+advanced.hdfs_get_files_and_block:
+    stdin: hdfs fsck /user/mail_2021q1/i.glushchenko/file.txt -files -blocks -locations
+advanced.hdfs_get_block_information:
+    stdin: hdfs fsck -blockId blk_1079538629
+advanced.hdfs_dfs_architecture:
+    stdin: |-
+        provide your
+        multiline answer
+        here
+advanced.webhdfs_read_100B:
+    stdin: curl -i "http://brain-node3.bigdatateam.org:50075/webhdfs/v1/user/mail_2021q1/i.glushchenko/file.txt?op=OPEN&user.name=mail_2021q1&namenoderpcaddress=brain-master.bigdatateam.org:8020&length=100&offset=0"  
+advanced.webhdfs_curl_follow_redirects:
+    stdin: curl -i -L "http://brain-master:50070/webhdfs/v1/user/mail_2021q1/i.glushchenko/file.txt?user.name=mail_2021q1&op=OPEN&length=100"
+advanced.webhdfs_get_file_detailed_information:
+    stdin: curl -i -L "http://brain-master:50070/webhdfs/v1/user/mail_2021q1/i.glushchenko/file.txt?op=GETFILESTATUS&user.name=mail_2021q1"
+advanced.webhdfs_change_file_replication:
+    stdin: curl -i -X PUT "http://brain-master:50070/webhdfs/v1/user/mail_2021q1/i.glushchenko/file.txt?op=SETREPLICATION&replication=2&user.name=mail_2021q1"
+advanced.webhdfs_append_to_file:
+    stdin: |-
+        curl -i -X POST "http://brain-master:50070/webhdfs/v1/user/mail_2021q1/i.glushchenko/file.txt?op=APPEND&user.name=mail_2021q1"
+        curl -i -X POST -T i.glushchenko/file.txt "http://brain-node1.bigdatateam.org:50075/webhdfs/v1/user/mail_2021q1/i.glushchenko/file.txt?op=APPEND&user.name=mail_2021q1&namenoderpcaddress=brain-master.bigdatateam.org:8020"
